@@ -1,0 +1,169 @@
+/* page-enter */
+
+
+.page-enter {
+    height: 100%;
+    margin: auto;
+    vertical-align: middle;
+    font-size: 0;
+    text-align: center;
+    white-space: nowrap;
+
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 0px;
+        height: 100%;
+        vertical-align: middle;
+        font-size: 0;
+    }
+
+
+    &__block {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        white-space: normal;
+        margin: 0 4%;
+
+
+        &-field {
+            float: left;
+            width: 100%;
+            display: none;
+            margin-bottom: 20px;
+        }
+
+
+        &-title:after {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 0.875rem;
+            line-height: 1.43em;
+        }
+
+
+        &-tab {
+            display: none;
+            color: #5da654;
+            cursor: pointer;
+            border-bottom: 1px dashed #5da654;
+            font-size: 0.875rem;
+            line-height: 1rem;
+
+
+            &:hover {
+                border: 0;
+                margin-bottom: 1px;
+            }
+
+
+            &-login {
+                position: absolute; 
+                right: 20px;
+                top: 15px;
+
+
+                &:before {
+                    content: "Вход";
+                }
+
+
+            }
+
+
+            &-register {
+                position: absolute; 
+                right: 20px;
+                top: 15px;
+
+
+                &:before {
+                    content: "Регистрация";
+                }
+
+
+            }
+
+
+            &-password {
+                position: absolute; 
+                right: 20px;
+                bottom: 26px;
+
+
+                &:before {
+                    content: "Забыли пароль?";
+                } 
+
+
+            }
+
+
+        }
+
+    }
+    
+}
+
+
+
+#login:checked ~ .page-enter__block .page-enter__block-title:before {
+    content: "Вход";
+}
+#login:checked ~ .page-enter__block .page-enter__block-tab-register {
+    display: inline-block;
+}
+#login:checked ~ .page-enter__block .page-enter__block-tab-password {
+    display: inline-block;
+}
+#login:checked ~ .page-enter__block .page-enter__block-field-email {
+    display: block;
+}
+#login:checked ~ .page-enter__block .page-enter__block-field-password {
+    display: block;
+}
+#login:checked ~ .page-enter__block .page-enter__block-button:before {
+    content: "Войти";
+}
+
+
+#register:checked ~ .page-enter__block .page-enter__block-title:before {
+    content: "Регистрация";
+}
+#register:checked ~ .page-enter__block .page-enter__block-tab-login {
+    display: inline-block;
+}
+#register:checked ~ .page-enter__block .page-enter__block-field-email {
+    display: block;
+}
+#register:checked ~ .page-enter__block .page-enter__block-field-password-create {
+    display: block;
+}
+#register:checked ~ .page-enter__block .page-enter__block-field-password-repeat {
+    display: block;
+}
+#register:checked ~ .page-enter__block .page-enter__block-button:before {
+    content: "Зарегистрироваться";
+}
+
+
+#password:checked ~ .page-enter__block .page-enter__block-title:before {
+    content: "Пароль потерялся";            
+}
+#password:checked ~ .page-enter__block .page-enter__block-title:after {
+    content: "Мы вышлем письмо для смены пароля Вам на электронную почту, указанную при регистрации:";          
+}
+#password:checked ~ .page-enter__block .page-enter__block-tab-login {
+    display: inline-block;
+}
+#password:checked ~ .page-enter__block .page-enter__block-field-email {
+    display: block;
+}
+#password:checked ~ .page-enter__block .page-enter__block-button:before {
+    content: "Отправить";
+}
+
+
+/* /page-enter */

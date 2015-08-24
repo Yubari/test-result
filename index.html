@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Форма входа</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+<form class="page-enter" action="" method="post">
+    
+    <input type="radio" class="switcher" name="switcher" id="login" checked>
+    <input type="radio" class="switcher" name="switcher" id="register">
+    <input type="radio" class="switcher" name="switcher" id="password">
+
+    <fieldset class="page-enter__block block">
+
+        <legend class="page-enter__block-title block__title"></legend>
+
+        <label class="page-enter__block-field page-enter__block-field-email">
+            <input type="text" name="email" placeholder="Электронная почта">
+        </label>
+        
+        <label class="page-enter__block-field page-enter__block-field-password">
+            <input type="password" name="password" placeholder="Пароль">
+        </label>
+        
+        <label class="page-enter__block-field page-enter__block-field-password-create">
+            <input type="password" name="password-create" placeholder="Придумайте пароль">
+        </label>
+
+        <label class="page-enter__block-field page-enter__block-field-password-repeat">
+            <input type="password" name="password-repeat" placeholder="Повторите пароль">
+        </label>
+
+        <button type="submit" class="page-enter__block-button"></button>
+
+        <label for="login" class="page-enter__block-tab page-enter__block-tab-login"></label>
+        <label for="register" class="page-enter__block-tab page-enter__block-tab-register"></label>
+        <label for="password" class="page-enter__block-tab page-enter__block-tab-password"></label>
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>
